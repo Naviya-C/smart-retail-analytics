@@ -1,7 +1,8 @@
 from sqlalchemy import create_engine
+from config import USER_D, PASSWORD_D
 
 engine = create_engine(
-    'postgresql://admin:admin123@localhost:5432/retail_analysis'
+    f'postgresql://{USER_D}:{PASSWORD_D}@localhost:5432/retail_analysis'
 )
 
 connection = engine.connect()
